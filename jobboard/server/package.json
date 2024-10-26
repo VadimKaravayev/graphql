@@ -1,0 +1,44 @@
+{
+  "name": "jobboard-server",
+  "version": "1.0.0",
+  "description": "GraphQL Server",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon src/server.ts",
+    "codegen": "graphql-codegen --config codegen.json"
+  },
+  "author": "Buddy Cake",
+  "license": "ISC",
+  "dependencies": {
+    "@apollo/server": "^4.11.0",
+    "better-sqlite3": "^11.3.0",
+    "cors": "^2.8.5",
+    "dataloader": "^2.2.2",
+    "express": "^4.21.1",
+    "express-jwt": "^8.4.1",
+    "graphql": "^16.9.0",
+    "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
+    "nanoid": "^5.0.7"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "5.0.3",
+    "@graphql-codegen/typescript": "4.1.0",
+    "@graphql-codegen/typescript-resolvers": "4.3.0",
+    "@tsconfig/node18": "^18.2.4",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.8.0",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.3"
+  },
+  "nodemonConfig": {
+    "ext": "graphql,ts",
+    "execMap": {
+      "ts": "tsx"
+    }
+  }
+}
